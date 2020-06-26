@@ -13,11 +13,11 @@ getDishes(): Dish[]{
 return DISHES;
 }
 
-getDish(id: string): Dish{
+getDish(id): Dish{
   return DISHES.filter((dish)=>(dish.id===id)) [0];
   }
 
-  getFeaturedDish(id: string): Dish{
+  getFeaturedDish(): Dish{
     return DISHES.filter((dish)=>(dish.featured)) [0];
     }
 
