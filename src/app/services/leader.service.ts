@@ -9,16 +9,16 @@ import { LEADERS } from '../shared/leaders';
 export class LeaderService {
 
   constructor() { }
-getLearders():Leader[]{
-  return LEADERS;
+getLearders():Promise<Leader[]>{
+  return Promise.resolve(LEADERS);
 
 }
-getDish(id: string): Leader{
-  return LEADERS.filter((leader)=>(leader.id===id)) [0];
+getDish(id: string): Promise<Leader>{
+  return Promise.resolve(LEADERS.filter((leader)=>(leader.id===id)) [0]);
   }
 
-getFeaturedLeader(): Leader{
-  return LEADERS.filter((leader)=>(leader.featured)) [0];
+getFeaturedLeader(): Promise<Leader>{
+  return Promise.resolve(LEADERS.filter((leader)=>(leader.featured)) [0]);
   }
 
 
