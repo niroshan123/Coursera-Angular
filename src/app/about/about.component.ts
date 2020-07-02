@@ -13,7 +13,10 @@ leaders: Leader[];
   constructor(private leaderService: LeaderService) { }
 
   ngOnInit() {
-    this.leaders = this.leaderService.getLearders();
+    this.leaderService.getLearders().then(leaders => {
+      return this.leaders = leaders;
+    });;
+    // this.leaders = this.leaderService.getLearders();
   }
 
   
